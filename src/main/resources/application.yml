@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: kafka-demo
+  kafka:
+    #kafkaµÿ÷∑
+    bootstrap-servers: 47.96.89.221:9092
+    consumer:
+      group-id: test-consumer-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+kafka:
+  topic:
+    group-id: topicGroupId
+    topic-name:
+      - topic1
+      - topic2
+      - topic3
